@@ -26,13 +26,21 @@
     <section class="mb-4">
         <h2>أحدث المقالات</h2>
         {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
-        <div class="card">
-            <h3 class="card-title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
-            <div class="card-content">
-                <p>{{ .Summary | truncate 150 }}</p>
-                <small class="text-light">{{ .Date.Format "2 يناير 2006" }}</small>
+        <div class="card recent-post-card">
+            {{ if .Params.featured_image }}
+            <div class="recent-post-image">
+                <img src="{{ .Params.featured_image }}" alt="{{ .Title }}" loading="lazy">
+            </div>
+            {{ end }}
+            
+            <div class="recent-post-content">
+                <h3 class="card-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h3>
+                <div class="card-content">
+                    <p>{{ .Summary | truncate 150 }}</p>
+                    <small class="text-light">{{ .Date.Format "2 يناير 2006" }}</small>
+                </div>
             </div>
         </div>
         {{ end }}
@@ -73,4 +81,55 @@
         <a href="/contact/" class="btn btn-secondary">تواصل معنا</a>
     </section>
 </div>
+
+<style>
+.recent-post-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.recent-post-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recent-post-image {
+    width: 150px;
+    height: 100px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.recent-post-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.recent-post-card:hover .recent-post-image img {
+    transform: scale(1.05);
+}
+
+.recent-post-content {
+    flex: 1;
+}
+
+@media (max-width: 768px) {
+    .recent-post-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .recent-post-image {
+        width: 100%;
+        height: 150px;
+    }
+}
+</style>
 {{ end }}
