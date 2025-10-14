@@ -1,0 +1,52 @@
+{{ define "main" }}
+<div class="page-header">
+    <h1>{{ .Title }}</h1>
+    {{ if .Content }}
+        <div class="page-description">
+            {{ .Content }}
+        </div>
+    {{ end }}
+</div>
+
+<div class="posts-list">
+    {{ range .Pages }}
+        <article class="article">
+            <h2 class="article-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h2>
+            
+            <div class="article-meta">
+                <time datetime="{{ .Date.Format "2006-01-02" }}">
+                    {{ .Date.Format "2 January 2006" }}
+                </time>
+                {{ if .Params.categories }}
+                    <span class="categories">
+                        {{ range .Params.categories }}
+                            <span class="category">{{ . }}</span>
+                        {{ end }}
+                    </span>
+                {{ end }}
+            </div>
+            
+            <div class="article-content">
+                {{ if .Summary }}
+                    {{ .Summary }}
+                    {{ if .Truncated }}
+                        <p><a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a></p>
+                    {{ end }}
+                {{ else }}
+                    {{ .Content }}
+                {{ end }}
+            </div>
+        </article>
+    {{ else }}
+        <div class="no-posts">
+            <p>لا توجد مقالات حالياً.</p>
+        </div>
+    {{ end }}
+</div>
+
+{{ if .Paginator }}
+    {{ partial "pagination.html" . }}
+{{ end }}
+{{ end }}

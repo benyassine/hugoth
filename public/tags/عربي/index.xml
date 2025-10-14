@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>عربي on موقعي الشخصي</title>
+    <link>http://example.org/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</link>
+    <description>Recent content in عربي on موقعي الشخصي</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ar</language>
+    <lastBuildDate>Thu, 25 Jan 2024 16:45:00 +0000</lastBuildDate>
+    <atom:link href="http://example.org/tags/%D8%B9%D8%B1%D8%A8%D9%8A/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>إنشاء موقع Hugo يدعم العربية</title>
+      <link>http://example.org/posts/hugo-arabic/</link>
+      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <guid>http://example.org/posts/hugo-arabic/</guid>
+      <description>كيفية إنشاء موقع Hugo يدعم اللغة العربية Hugo هو مولد مواقع ثابتة سريع ومرن، ولكن إعداده لدعم اللغة العربية يتطلب بعض الاعتبارات الخاصة.&#xA;التحديات في دعم العربية 1. اتجاه النص (RTL) العربية تُكتب من اليمين إلى اليسار، مما يتطلب تعديلات في CSS.&#xA;2. الخطوط نحتاج إلى خطوط تدعم العربية بشكل جيد.&#xA;3. التخطيط (Layout) القوائم والعناصر تحتاج إلى إعادة ترتيب لتناسب اتجاه النص.&#xA;الحلول العملية إعداد اللغة في config.toml languageCode = &amp;#34;ar&amp;#34; defaultContentLanguage = &amp;#34;ar&amp;#34; title = &amp;#34;موقعي باللغة العربية&amp;#34; [params] description = &amp;#34;وصف الموقع باللغة العربية&amp;#34; CSS للدعم العربي body { direction: rtl; text-align: right; font-family: &amp;#39;Arial Unicode MS&amp;#39;, sans-serif; } /* تعديل القوائم */ .</description>
+    </item>
+  </channel>
+</rss>

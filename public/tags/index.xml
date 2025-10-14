@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on موقعي الشخصي</title>
+    <link>http://example.org/tags/</link>
+    <description>Recent content in Tags on موقعي الشخصي</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ar</language>
+    <lastBuildDate>Thu, 25 Jan 2024 16:45:00 +0000</lastBuildDate>
+    <atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>hugo</title>
+      <link>http://example.org/tags/hugo/</link>
+      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <guid>http://example.org/tags/hugo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>rtl</title>
+      <link>http://example.org/tags/rtl/</link>
+      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <guid>http://example.org/tags/rtl/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>static site</title>
+      <link>http://example.org/tags/static-site/</link>
+      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <guid>http://example.org/tags/static-site/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>عربي</title>
+      <link>http://example.org/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</link>
+      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D8%B9%D8%B1%D8%A8%D9%8A/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>css</title>
+      <link>http://example.org/tags/css/</link>
+      <pubDate>Sat, 20 Jan 2024 14:30:00 +0000</pubDate>
+      <guid>http://example.org/tags/css/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>تصميم متجاوب</title>
+      <link>http://example.org/tags/%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%85%D8%AA%D8%AC%D8%A7%D9%88%D8%A8/</link>
+      <pubDate>Sat, 20 Jan 2024 14:30:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%85%D8%AA%D8%AC%D8%A7%D9%88%D8%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>موبايل</title>
+      <link>http://example.org/tags/%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84/</link>
+      <pubDate>Sat, 20 Jan 2024 14:30:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D9%85%D9%88%D8%A8%D8%A7%D9%8A%D9%84/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>ترحيب</title>
+      <link>http://example.org/tags/%D8%AA%D8%B1%D8%AD%D9%8A%D8%A8/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D8%AA%D8%B1%D8%AD%D9%8A%D8%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>موقع جديد</title>
+      <link>http://example.org/tags/%D9%85%D9%88%D9%82%D8%B9-%D8%AC%D8%AF%D9%8A%D8%AF/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D9%85%D9%88%D9%82%D8%B9-%D8%AC%D8%AF%D9%8A%D8%AF/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>

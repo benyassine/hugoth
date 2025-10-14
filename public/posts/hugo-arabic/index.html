@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>إنشاء موقع Hugo يدعم العربية - موقعي الشخصي</title>
+    
+    <meta name="description" content="موقع شخصي باللغة العربية">
+    <meta name="author" content="اسم المؤلف">
+    
+    
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://example.org/posts/hugo-arabic/">
+    <meta property="og:title" content="إنشاء موقع Hugo يدعم العربية">
+    <meta property="og:description" content="موقع شخصي باللغة العربية">
+    
+    
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="http://example.org/posts/hugo-arabic/">
+    <meta property="twitter:title" content="إنشاء موقع Hugo يدعم العربية">
+    <meta property="twitter:description" content="موقع شخصي باللغة العربية">
+    
+    
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    
+    
+    <link rel="stylesheet" href="/css/style.css">
+    
+    
+    </head>
+<body>
+    <header class="site-header">
+    <div class="container">
+        <div class="header-content">
+            <a href="/" class="site-title">موقعي الشخصي</a>
+            
+            <button class="menu-toggle" aria-label="فتح القائمة" onclick="toggleMenu()">
+                ☰
+            </button>
+            
+            <nav class="main-nav" id="main-nav">
+                <ul>
+                    
+                        <li>
+                            <a href="/" 
+                               >
+                                الرئيسية
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="/posts/" 
+                               >
+                                المقالات
+                            </a>
+                        </li>
+                    
+                        <li>
+                            <a href="/about/" 
+                               >
+                                عني
+                            </a>
+                        </li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+    
+    <main class="main-content">
+        <div class="container">
+            
+<article class="article">
+    <header class="article-header">
+        <h1 class="article-title">إنشاء موقع Hugo يدعم العربية</h1>
+        
+        <div class="article-meta">
+            <time datetime="2024-01-25">
+                25 January 2024
+            </time>
+            
+            
+                <span class="author">بواسطة المؤلف</span>
+            
+            
+            
+                <div class="categories">
+                    <span>التصنيفات: </span>
+                    
+                        
+                        <a href="/categories/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%88%D9%8A%D8%A8">تطوير الويب</a>
+                    
+                        , 
+                        <a href="/categories/hugo">hugo</a>
+                    
+                </div>
+            
+            
+            
+                <div class="tags">
+                    <span>الكلمات المفتاحية: </span>
+                    
+                        
+                        <a href="/tags/hugo">hugo</a>
+                    
+                        , 
+                        <a href="/tags/%D8%B9%D8%B1%D8%A8%D9%8A">عربي</a>
+                    
+                        , 
+                        <a href="/tags/rtl">rtl</a>
+                    
+                        , 
+                        <a href="/tags/static-site">static site</a>
+                    
+                </div>
+            
+        </div>
+    </header>
+    
+    <div class="article-content">
+        <h1 id="كيفية-إنشاء-موقع-hugo-يدعم-اللغة-العربية">كيفية إنشاء موقع Hugo يدعم اللغة العربية</h1>
+<p>Hugo هو مولد مواقع ثابتة سريع ومرن، ولكن إعداده لدعم اللغة العربية يتطلب بعض الاعتبارات الخاصة.</p>
+<h2 id="التحديات-في-دعم-العربية">التحديات في دعم العربية</h2>
+<h3 id="1-اتجاه-النص-rtl">1. اتجاه النص (RTL)</h3>
+<p>العربية تُكتب من اليمين إلى اليسار، مما يتطلب تعديلات في CSS.</p>
+<h3 id="2-الخطوط">2. الخطوط</h3>
+<p>نحتاج إلى خطوط تدعم العربية بشكل جيد.</p>
+<h3 id="3-التخطيط-layout">3. التخطيط (Layout)</h3>
+<p>القوائم والعناصر تحتاج إلى إعادة ترتيب لتناسب اتجاه النص.</p>
+<h2 id="الحلول-العملية">الحلول العملية</h2>
+<h3 id="إعداد-اللغة-في-configtoml">إعداد اللغة في config.toml</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span><span style="color:#a6e22e">languageCode</span> = <span style="color:#e6db74">&#34;ar&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">defaultContentLanguage</span> = <span style="color:#e6db74">&#34;ar&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">title</span> = <span style="color:#e6db74">&#34;موقعي باللغة العربية&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">description</span> = <span style="color:#e6db74">&#34;وصف الموقع باللغة العربية&#34;</span>
+</span></span></code></pre></div><h3 id="css-للدعم-العربي">CSS للدعم العربي</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-css" data-lang="css"><span style="display:flex;"><span><span style="color:#f92672">body</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">direction</span>: <span style="color:#66d9ef">rtl</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">right</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">font-family</span>: <span style="color:#e6db74">&#39;Arial Unicode MS&#39;</span>, <span style="color:#66d9ef">sans-serif</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* تعديل القوائم */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">nav</span> <span style="color:#f92672">ul</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">justify-content</span>: <span style="color:#66d9ef">flex-end</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">/* تعديل الأزرار */</span>
+</span></span><span style="display:flex;"><span>.<span style="color:#a6e22e">btn</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">text-align</span>: <span style="color:#66d9ef">center</span>;
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="html-templates">HTML Templates</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;ar&#34;</span> <span style="color:#a6e22e">dir</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;rtl&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;UTF-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">&lt;!-- باقي العناصر --&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span></code></pre></div><h2 id="نصائح-مهمة">نصائح مهمة</h2>
+<ol>
+<li><strong>اختبر على متصفحات مختلفة</strong>: بعض المتصفحات تعامل RTL بشكل مختلف</li>
+<li><strong>استخدم Flexbox بحذر</strong>: قد تحتاج إلى <code>flex-direction: row-reverse</code></li>
+<li><strong>انتبه للأيقونات</strong>: قد تحتاج إلى عكسها أفقياً</li>
+<li><strong>اختبر التواريخ</strong>: تأكد من عرض التواريخ بالشكل الصحيح</li>
+</ol>
+<h2 id="الخطوط-المناسبة">الخطوط المناسبة</h2>
+<ul>
+<li><strong>للويب</strong>: Arial Unicode MS, Tahoma</li>
+<li><strong>للطباعة</strong>: Traditional Arabic, Simplified Arabic</li>
+<li><strong>الحديثة</strong>: Noto Sans Arabic, Cairo</li>
+</ul>
+<h2 id="أدوات-مفيدة">أدوات مفيدة</h2>
+<ol>
+<li><strong>RTL Tester</strong>: لاختبار التصميم</li>
+<li><strong>Arabic Lorem Ipsum</strong>: لنص تجريبي</li>
+<li><strong>Font Squirrel</strong>: لتحويل الخطوط</li>
+</ol>
+<h2 id="خلاصة">خلاصة</h2>
+<p>إنشاء موقع Hugo يدعم العربية ليس صعباً، لكنه يتطلب التخطيط المسبق والانتباه للتفاصيل. مع الإعدادات الصحيحة، يمكنك الحصول على موقع جميل ومتجاوب يدعم العربية بشكل مثالي.</p>
+<p>النتيجة النهائية ستكون موقعاً سريعاً وأنيقاً يقدم تجربة ممتازة للقراء العرب.</p>
+
+    </div>
+    
+    <footer class="article-footer">
+        <div class="article-navigation">
+            
+                <a href="http://example.org/posts/responsive-design/" class="btn btn-secondary">
+                    ← أهمية التصميم المتجاوب في عصر الهواتف الذكية
+                </a>
+            
+            
+            
+        </div>
+    </footer>
+</article>
+
+        </div>
+    </main>
+    
+    <footer class="site-footer">
+    <div class="container">
+        <div class="footer-content">
+            <p>&copy; 2025 موقعي الشخصي. جميع الحقوق محفوظة.</p>
+            
+                <p>تم التطوير بواسطة اسم المؤلف</p>
+            
+        </div>
+    </div>
+</footer>
+    
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

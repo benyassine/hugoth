@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>تصميم متجاوب on موقعي الشخصي</title>
+    <link>http://example.org/tags/%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%85%D8%AA%D8%AC%D8%A7%D9%88%D8%A8/</link>
+    <description>Recent content in تصميم متجاوب on موقعي الشخصي</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ar</language>
+    <lastBuildDate>Sat, 20 Jan 2024 14:30:00 +0000</lastBuildDate>
+    <atom:link href="http://example.org/tags/%D8%AA%D8%B5%D9%85%D9%8A%D9%85-%D9%85%D8%AA%D8%AC%D8%A7%D9%88%D8%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>أهمية التصميم المتجاوب في عصر الهواتف الذكية</title>
+      <link>http://example.org/posts/responsive-design/</link>
+      <pubDate>Sat, 20 Jan 2024 14:30:00 +0000</pubDate>
+      <guid>http://example.org/posts/responsive-design/</guid>
+      <description>لماذا التصميم المتجاوب مهم جداً؟ في عالم اليوم، أصبح استخدام الهواتف الذكية والأجهزة اللوحية لتصفح الإنترنت أمراً شائعاً جداً. لذلك، من الضروري أن تكون مواقعنا الإلكترونية متجاوبة وتعمل بشكل مثالي على جميع الأجهزة.&#xA;ما هو التصميم المتجاوب؟ التصميم المتجاوب (Responsive Design) هو منهجية في تطوير الويب تهدف إلى إنشاء مواقع تتكيف مع أحجام الشاشات المختلفة، من الهواتف الذكية الصغيرة إلى شاشات الكمبيوتر المكتبي الكبيرة.&#xA;فوائد التصميم المتجاوب 1. تحسين تجربة المستخدم عندما يكون موقعك متجاوباً، يحصل المستخدمون على تجربة ممتازة بغض النظر عن الجهاز الذي يستخدمونه.</description>
+    </item>
+  </channel>
+</rss>

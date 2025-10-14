@@ -1,0 +1,48 @@
+{{ if .Paginator }}
+<nav class="pagination" role="navigation" aria-label="التنقل بين الصفحات">
+    <div class="pagination-links">
+        {{ if .Paginator.HasPrev }}
+            <a href="{{ .Paginator.Prev.URL }}" class="btn btn-secondary">
+                ← الصفحة السابقة
+            </a>
+        {{ end }}
+        
+        <span class="pagination-info">
+            صفحة {{ .Paginator.PageNumber }} من {{ .Paginator.TotalPages }}
+        </span>
+        
+        {{ if .Paginator.HasNext }}
+            <a href="{{ .Paginator.Next.URL }}" class="btn btn-secondary">
+                الصفحة التالية →
+            </a>
+        {{ end }}
+    </div>
+</nav>
+
+<style>
+.pagination {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.pagination-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.pagination-info {
+    color: var(--dark-gray);
+    font-weight: 500;
+}
+
+@media (max-width: 768px) {
+    .pagination-links {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+</style>
+{{ end }}

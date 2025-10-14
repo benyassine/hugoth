@@ -1,0 +1,15 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "Arabic Blue"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
+description = "A responsive Hugo theme with Arabic support, featuring light blue colors and gray background"
+homepage = "http://example.com/"
+tags = ["blog", "responsive", "arabic", "rtl", "blue", "minimal"]
+features = ["blog", "responsive", "rtl-support", "arabic"]
+min_version = "0.41.0"
+
+[author]
+  name = "Hugo Theme Developer"
+  homepage = "http://example.com/"

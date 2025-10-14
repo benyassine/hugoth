@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>موقع جديد on موقعي الشخصي</title>
+    <link>http://example.org/tags/%D9%85%D9%88%D9%82%D8%B9-%D8%AC%D8%AF%D9%8A%D8%AF/</link>
+    <description>Recent content in موقع جديد on موقعي الشخصي</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ar</language>
+    <lastBuildDate>Mon, 15 Jan 2024 10:00:00 +0000</lastBuildDate>
+    <atom:link href="http://example.org/tags/%D9%85%D9%88%D9%82%D8%B9-%D8%AC%D8%AF%D9%8A%D8%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>مرحباً بكم في موقعي الجديد</title>
+      <link>http://example.org/posts/welcome/</link>
+      <pubDate>Mon, 15 Jan 2024 10:00:00 +0000</pubDate>
+      <guid>http://example.org/posts/welcome/</guid>
+      <description>مرحباً بكم جميعاً أهلاً وسهلاً بكم في موقعي الشخصي الجديد! أنا سعيد جداً لإطلاق هذا الموقع الذي تم تطويره باستخدام Hugo وقالب مخصص يدعم اللغة العربية.&#xA;ما الجديد في هذا الموقع؟ تصميم متجاوب: يعمل الموقع بشكل مثالي على جميع الأجهزة دعم كامل للعربية: تم تصميم القالب خصيصاً ليدعم الكتابة من اليمين إلى اليسار ألوان جميلة: استخدمت اللون الأزرق السماوي مع خلفية رمادية فاتحة سرعة عالية: تم تحسين الموقع للحصول على أفضل أداء ماذا ستجدون هنا؟ سأقوم بنشر مقالات متنوعة تشمل:</description>
+    </item>
+  </channel>
+</rss>
