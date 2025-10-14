@@ -1,0 +1,27 @@
+baseURL = "https://example.org"
+languageCode = "ar"
+title = "موقعي الشخصي"
+theme = "arabic-blue"
+
+[params]
+  description = "موقع شخصي باللغة العربية"
+  author = "اسم المؤلف"
+  email = "email@example.com"
+  
+[menu]
+  [[menu.main]]
+    name = "الرئيسية"
+    url = "/"
+    weight = 1
+  [[menu.main]]
+    name = "حول"
+    url = "/about/"
+    weight = 2
+  [[menu.main]]
+    name = "المقالات"
+    url = "/posts/"
+    weight = 3
+  [[menu.main]]
+    name = "اتصل بي"
+    url = "/contact/"
+    weight = 4

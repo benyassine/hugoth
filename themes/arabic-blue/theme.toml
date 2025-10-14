@@ -1,0 +1,18 @@
+name = "Arabic Blue"
+license = "MIT"
+licenselink = "https://github.com/your-username/arabic-blue-hugo-theme/blob/main/LICENSE"
+description = "قالب Hugo متجاوب يدعم العربية مع ألوان أزرق يماوي وخلفية رمادية"
+homepage = "https://github.com/your-username/arabic-blue-hugo-theme"
+demosite = "https://your-demo-site.com"
+tags = ["arabic", "rtl", "responsive", "blog", "minimal"]
+features = ["rtl", "responsive", "blog", "minimal", "arabic"]
+min_version = "0.60.0"
+
+[author]
+  name = "Your Name"
+  homepage = "https://your-website.com"
+
+[original]
+  name = "Arabic Blue Hugo Theme"
+  homepage = "https://github.com/your-username/arabic-blue-hugo-theme"
+  repo = "https://github.com/your-username/arabic-blue-hugo-theme.git"

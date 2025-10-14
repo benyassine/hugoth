@@ -1,0 +1,40 @@
+{{ define "main" }}
+<div class="container fade-in">
+    <div class="text-center">
+        <h1 style="font-size: 6rem; color: var(--primary-color); margin-bottom: 1rem;">404</h1>
+        <h2>الصفحة غير موجودة</h2>
+        <p class="mb-4">عذراً، الصفحة التي تبحث عنها غير موجودة أو تم نقلها.</p>
+        
+        <div class="mb-4">
+            <a href="{{ .Site.BaseURL }}" class="btn">العودة للصفحة الرئيسية</a>
+        </div>
+        
+        <div class="card" style="max-width: 500px; margin: 0 auto;">
+            <h3>اقتراحات مفيدة:</h3>
+            <ul style="text-align: right; list-style: none; padding: 0;">
+                <li>• تأكد من صحة الرابط</li>
+                <li>• استخدم البحث للعثور على المحتوى</li>
+                <li>• تصفح القائمة الرئيسية</li>
+                <li>• عد إلى الصفحة السابقة</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<style>
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.card ul li {
+    padding: 0.5rem 0;
+    color: var(--text-light);
+}
+
+.card ul li:before {
+    content: "→";
+    color: var(--primary-color);
+    margin-left: 0.5rem;
+}
+</style>
+{{ end }}

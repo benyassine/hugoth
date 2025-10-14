@@ -1,0 +1,9 @@
+{{ $text := .Get "text" }}
+{{ $url := .Get "url" | default "#" }}
+{{ $target := .Get "target" | default "" }}
+
+<li>
+    <a href="{{ $url }}" {{ if $target }}target="{{ $target }}"{{ end }}>
+        {{ $text }}
+    </a>
+</li>

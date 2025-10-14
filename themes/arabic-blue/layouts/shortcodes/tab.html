@@ -1,0 +1,11 @@
+{{ $title := .Get "title" }}
+{{ $id := .Get "id" | default (printf "tab-%d" now.Unix) }}
+{{ $content := .Inner }}
+
+<button class="tab-button" data-tab="{{ $id }}">
+    {{ $title }}
+</button>
+
+<div class="tab-content" id="{{ $id }}">
+    {{ $content | markdownify }}
+</div>

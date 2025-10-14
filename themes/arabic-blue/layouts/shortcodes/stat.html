@@ -1,0 +1,11 @@
+{{ $number := .Get "number" }}
+{{ $label := .Get "label" }}
+{{ $description := .Get "description" }}
+
+<div class="stat-item">
+    <span class="stat-number">{{ $number }}</span>
+    <div class="stat-label">{{ $label }}</div>
+    {{ if $description }}
+    <div class="stat-description">{{ $description }}</div>
+    {{ end }}
+</div>

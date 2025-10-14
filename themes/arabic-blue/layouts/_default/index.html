@@ -1,0 +1,76 @@
+{{ define "main" }}
+<div class="container fade-in">
+    <h1 class="text-center">مرحباً بك في {{ .Site.Title }}</h1>
+    
+    <div class="text-center mb-4">
+        <p class="lead">{{ .Site.Params.description }}</p>
+        <a href="/about/" class="btn">تعرف عليّ أكثر</a>
+    </div>
+    
+    <!-- Featured Content -->
+    {{ if .Site.Params.show_featured }}
+    <section class="mb-4">
+        <h2>المحتوى المميز</h2>
+        <div class="card">
+            <h3 class="card-title">أهلاً وسهلاً</h3>
+            <div class="card-content">
+                <p>هذا قالب Hugo متجاوب مصمم خصيصاً للغة العربية مع دعم كامل للاتجاه من اليمين إلى اليسار (RTL).</p>
+                <p>يتميز القالب بالألوان المطلوبة: الأزرق اليماوي كلون أساسي والخلفية الرمادية القريبة للأبيض.</p>
+            </div>
+        </div>
+    </section>
+    {{ end }}
+    
+    <!-- Recent Posts -->
+    {{ if .Site.Params.show_recent_posts }}
+    <section class="mb-4">
+        <h2>أحدث المقالات</h2>
+        {{ range first 3 (where .Site.RegularPages "Type" "posts") }}
+        <div class="card">
+            <h3 class="card-title">
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </h3>
+            <div class="card-content">
+                <p>{{ .Summary | truncate 150 }}</p>
+                <small class="text-light">{{ .Date.Format "2 يناير 2006" }}</small>
+            </div>
+        </div>
+        {{ end }}
+    </section>
+    {{ end }}
+    
+    <!-- Services or Features -->
+    <section class="mb-4">
+        <h2>المميزات</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem;">
+            <div class="card">
+                <h3 class="card-title">🎨 تصميم متجاوب</h3>
+                <div class="card-content">
+                    <p>يتكيف القالب مع جميع أحجام الشاشات من الهواتف الذكية إلى أجهزة الكمبيوتر المكتبية.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">🌍 دعم العربية</h3>
+                <div class="card-content">
+                    <p>دعم كامل للغة العربية مع اتجاه النص من اليمين إلى اليسار (RTL).</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3 class="card-title">⚡ سريع وخفيف</h3>
+                <div class="card-content">
+                    <p>مصمم ليكون سريع التحميل وخفيف على المتصفحات.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call to Action -->
+    <section class="text-center">
+        <h2>ابدأ رحلتك معنا</h2>
+        <p class="mb-3">انضم إلى مجتمعنا واستفد من المحتوى المميز</p>
+        <a href="/contact/" class="btn btn-secondary">تواصل معنا</a>
+    </section>
+</div>
+{{ end }}

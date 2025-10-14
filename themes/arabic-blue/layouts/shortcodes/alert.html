@@ -1,0 +1,54 @@
+{{ $type := .Get "type" | default "info" }}
+{{ $title := .Get "title" }}
+{{ $content := .Inner }}
+
+<div class="alert alert-{{ $type }}">
+    {{ if $title }}
+    <h4 class="alert-title">{{ $title }}</h4>
+    {{ end }}
+    <div class="alert-content">
+        {{ $content | markdownify }}
+    </div>
+</div>
+
+<style>
+.alert {
+    padding: 1rem 1.5rem;
+    margin: 1.5rem 0;
+    border-radius: 5px;
+    border-right: 4px solid;
+}
+
+.alert-info {
+    background-color: #e3f2fd;
+    border-color: var(--primary-color);
+    color: #01579b;
+}
+
+.alert-success {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+.alert-warning {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+.alert-error {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+}
+
+.alert-title {
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.alert-content {
+    line-height: 1.6;
+}
+</style>

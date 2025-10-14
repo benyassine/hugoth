@@ -1,0 +1,59 @@
+{{ $address := .Get "address" }}
+{{ $lat := .Get "lat" }}
+{{ $lng := .Get "lng" }}
+{{ $zoom := .Get "zoom" | default "15" }}
+{{ $height := .Get "height" | default "400" }}
+
+<div class="map-container" style="height: {{ $height }}px;">
+    {{ if $lat and $lng }}
+    <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.215019104!2d{{ $lng }}!3d{{ $lat }}!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2z{{ $lat }}%2C{{ $lng }}!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    {{ else if $address }}
+    <iframe 
+        src="https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q={{ $address | urlquery }}"
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+    {{ else }}
+    <div class="map-placeholder">
+        <p>يرجى توفير العنوان أو الإحداثيات</p>
+    </div>
+    {{ end }}
+</div>
+
+<style>
+.map-container {
+    margin: 2rem 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    background: var(--background-light);
+}
+
+.map-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: var(--text-light);
+    font-style: italic;
+}
+
+@media (max-width: 768px) {
+    .map-container {
+        margin: 1rem 0;
+        height: 300px !important;
+    }
+}
+</style>

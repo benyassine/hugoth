@@ -1,0 +1,14 @@
+{{ $question := .Get "question" }}
+{{ $answer := .Inner }}
+
+<div class="faq-item">
+    <button class="faq-question">
+        {{ $question }}
+        <span class="faq-arrow">▼</span>
+    </button>
+    <div class="faq-answer">
+        <div class="faq-answer-content">
+            {{ $answer | markdownify }}
+        </div>
+    </div>
+</div>
