@@ -1,0 +1,102 @@
+{{ $title := .Get "title" | default "انقر للعرض" }}
+{{ $content := .Inner }}
+
+<div class="dropdown">
+    <button class="dropdown-toggle" onclick="toggleDropdown(this)">
+        {{ $title }}
+        <span class="dropdown-arrow">▼</span>
+    </button>
+    <div class="dropdown-content">
+        {{ $content | markdownify }}
+    </div>
+</div>
+
+<style>
+.dropdown {
+    margin: 1rem 0;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+.dropdown-toggle {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+    background-color: var(--primary-dark);
+}
+
+.dropdown-arrow {
+    transition: transform 0.3s ease;
+}
+
+.dropdown-toggle.active .dropdown-arrow {
+    transform: rotate(180deg);
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 100%;
+    box-shadow: var(--shadow);
+    border-radius: 5px;
+    z-index: 1000;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+.dropdown-content p {
+    margin-bottom: 0.5rem;
+}
+
+.dropdown-content p:last-child {
+    margin-bottom: 0;
+}
+</style>
+
+<script>
+function toggleDropdown(button) {
+    const content = button.nextElementSibling;
+    const isActive = button.classList.contains('active');
+    
+    // Close all other dropdowns
+    document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+        btn.classList.remove('active');
+        btn.nextElementSibling.classList.remove('show');
+    });
+    
+    if (!isActive) {
+        button.classList.add('active');
+        content.classList.add('show');
+    }
+}
+
+// Close dropdown when clicking outside
+document.addEventListener('click', function(event) {
+    if (!event.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-toggle').forEach(btn => {
+            btn.classList.remove('active');
+            btn.nextElementSibling.classList.remove('show');
+        });
+    }
+});
+</script>

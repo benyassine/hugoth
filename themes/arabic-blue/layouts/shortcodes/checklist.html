@@ -1,0 +1,72 @@
+{{ $content := .Inner }}
+
+<div class="checklist">
+    {{ $content | markdownify }}
+</div>
+
+<style>
+.checklist {
+    margin: 1.5rem 0;
+}
+
+.checklist ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist li {
+    position: relative;
+    padding: 0.75rem 0 0.75rem 2.5rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.checklist li:before {
+    content: "✓";
+    position: absolute;
+    right: 0;
+    top: 0.75rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.checklist li.done {
+    opacity: 0.7;
+    text-decoration: line-through;
+}
+
+.checklist li.done:before {
+    background-color: #4caf50;
+}
+
+.checklist li.pending:before {
+    background-color: #ff9800;
+    content: "⏳";
+}
+
+.checklist li.cancelled:before {
+    background-color: #f44336;
+    content: "✗";
+}
+
+@media (max-width: 768px) {
+    .checklist li {
+        padding-right: 2rem;
+    }
+    
+    .checklist li:before {
+        width: 1.25rem;
+        height: 1.25rem;
+        font-size: 0.7rem;
+    }
+}
+</style>

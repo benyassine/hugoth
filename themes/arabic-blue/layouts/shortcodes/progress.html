@@ -1,0 +1,118 @@
+{{ $value := .Get "value" | default "0" }}
+{{ $max := .Get "max" | default "100" }}
+{{ $label := .Get "label" | default "التقدم" }}
+{{ $color := .Get "color" | default "primary" }}
+{{ $animated := .Get "animated" | default "true" }}
+
+<div class="progress-container">
+    <div class="progress-label">
+        <span>{{ $label }}</span>
+        <span class="progress-value">{{ $value }}%</span>
+    </div>
+    <div class="progress-bar">
+        <div class="progress-fill progress-{{ $color }}" 
+             data-value="{{ $value }}" 
+             data-animated="{{ $animated }}"
+             style="width: 0%;">
+        </div>
+    </div>
+</div>
+
+<style>
+.progress-container {
+    margin: 1.5rem 0;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.progress-value {
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background-color: var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 4px;
+    transition: width 1s ease;
+    position: relative;
+}
+
+.progress-fill:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+.progress-primary { background-color: var(--primary-color); }
+.progress-success { background-color: #4caf50; }
+.progress-warning { background-color: #ff9800; }
+.progress-danger { background-color: #f44336; }
+.progress-info { background-color: #2196f3; }
+
+@media (max-width: 768px) {
+    .progress-container {
+        margin: 1rem 0;
+    }
+    
+    .progress-bar {
+        height: 6px;
+    }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const progressBars = document.querySelectorAll('.progress-fill');
+    
+    const animateProgress = (bar) => {
+        const value = bar.getAttribute('data-value');
+        const animated = bar.getAttribute('data-animated') === 'true';
+        
+        if (animated) {
+            setTimeout(() => {
+                bar.style.width = value + '%';
+            }, 100);
+        } else {
+            bar.style.width = value + '%';
+        }
+    };
+    
+    // Animate progress bars when they come into view
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                animateProgress(entry.target);
+                observer.unobserve(entry.target);
+            }
+        });
+    });
+    
+    progressBars.forEach(bar => {
+        observer.observe(bar);
+    });
+});
+</script>

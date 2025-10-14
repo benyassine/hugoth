@@ -1,0 +1,33 @@
+<footer class="footer">
+    <div class="footer-content">
+        <p>&copy; {{ now.Format "2006" }} {{ .Site.Params.author }}. جميع الحقوق محفوظة.</p>
+        <p>{{ .Site.Params.description }}</p>
+        
+        <div class="social-links">
+            {{ if .Site.Params.email }}
+                <a href="mailto:{{ .Site.Params.email }}" aria-label="البريد الإلكتروني">
+                    📧
+                </a>
+            {{ end }}
+            {{ if .Site.Params.github }}
+                <a href="{{ .Site.Params.github }}" target="_blank" rel="noopener" aria-label="GitHub">
+                    🐙
+                </a>
+            {{ end }}
+            {{ if .Site.Params.linkedin }}
+                <a href="{{ .Site.Params.linkedin }}" target="_blank" rel="noopener" aria-label="LinkedIn">
+                    💼
+                </a>
+            {{ end }}
+            {{ if .Site.Params.twitter }}
+                <a href="{{ .Site.Params.twitter }}" target="_blank" rel="noopener" aria-label="Twitter">
+                    🐦
+                </a>
+            {{ end }}
+        </div>
+        
+        <p class="mt-2">
+            <small>صُنع بـ ❤️ باستخدام <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></small>
+        </p>
+    </div>
+</footer>

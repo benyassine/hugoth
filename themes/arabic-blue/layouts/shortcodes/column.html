@@ -1,0 +1,14 @@
+{{ $content := .Inner }}
+
+<div class="column">
+    {{ $content | markdownify }}
+</div>
+
+<style>
+.column {
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+</style>

@@ -1,0 +1,68 @@
+{{ $content := .Inner }}
+
+<div class="table-container">
+    {{ $content | markdownify }}
+</div>
+
+<style>
+.table-container {
+    margin: 2rem 0;
+    overflow-x: auto;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+}
+
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--background-light);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.table-container th,
+.table-container td {
+    padding: 1rem;
+    text-align: right;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.table-container th {
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.table-container tr:hover {
+    background-color: var(--background-color);
+}
+
+.table-container tr:last-child td {
+    border-bottom: none;
+}
+
+.table-container tbody tr:nth-child(even) {
+    background-color: rgba(0, 188, 212, 0.05);
+}
+
+.table-container tbody tr:nth-child(even):hover {
+    background-color: rgba(0, 188, 212, 0.1);
+}
+
+@media (max-width: 768px) {
+    .table-container {
+        margin: 1rem 0;
+    }
+    
+    .table-container th,
+    .table-container td {
+        padding: 0.75rem 0.5rem;
+        font-size: 0.9rem;
+    }
+    
+    .table-container th {
+        font-size: 1rem;
+    }
+}
+</style>

@@ -1,0 +1,163 @@
+{{ $type := .Get "type" | default "info" }}
+{{ $title := .Get "title" }}
+{{ $dismissible := .Get "dismissible" | default "true" }}
+{{ $content := .Inner }}
+
+<div class="notification notification-{{ $type }}" id="notification-{{ now.Unix }}">
+    {{ if $title }}
+    <div class="notification-header">
+        <h4 class="notification-title">{{ $title }}</h4>
+        {{ if eq $dismissible "true" }}
+        <button class="notification-close" onclick="closeNotification(this)">×</button>
+        {{ end }}
+    </div>
+    {{ end }}
+    
+    <div class="notification-content">
+        {{ $content | markdownify }}
+    </div>
+</div>
+
+<style>
+.notification {
+    padding: 1rem 1.5rem;
+    margin: 1rem 0;
+    border-radius: 8px;
+    border-right: 4px solid;
+    position: relative;
+    animation: slideIn 0.3s ease;
+}
+
+.notification-info {
+    background-color: #e3f2fd;
+    border-color: var(--primary-color);
+    color: #01579b;
+}
+
+.notification-success {
+    background-color: #e8f5e8;
+    border-color: #4caf50;
+    color: #2e7d32;
+}
+
+.notification-warning {
+    background-color: #fff3e0;
+    border-color: #ff9800;
+    color: #e65100;
+}
+
+.notification-error {
+    background-color: #ffebee;
+    border-color: #f44336;
+    color: #c62828;
+}
+
+.notification-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.notification-title {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.notification-close {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: inherit;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-close:hover {
+    opacity: 1;
+}
+
+.notification-content {
+    line-height: 1.6;
+}
+
+.notification-content p {
+    margin: 0;
+}
+
+.notification-content p:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideOut {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+}
+
+.notification.closing {
+    animation: slideOut 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .notification {
+        padding: 0.75rem 1rem;
+        margin: 0.5rem 0;
+    }
+    
+    .notification-title {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<script>
+function closeNotification(button) {
+    const notification = button.closest('.notification');
+    notification.classList.add('closing');
+    
+    setTimeout(() => {
+        notification.remove();
+    }, 300);
+}
+
+// Auto-close notifications after 5 seconds
+document.addEventListener('DOMContentLoaded', function() {
+    const notifications = document.querySelectorAll('.notification');
+    
+    notifications.forEach(notification => {
+        const dismissible = notification.querySelector('.notification-close');
+        if (dismissible) {
+            setTimeout(() => {
+                if (notification.parentNode) {
+                    closeNotification(dismissible);
+                }
+            }, 5000);
+        }
+    });
+});
+</script>

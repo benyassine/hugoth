@@ -1,0 +1,192 @@
+{{ $name := .Get "name" }}
+{{ $title := .Get "title" }}
+{{ $image := .Get "image" }}
+{{ $bio := .Get "bio" }}
+{{ $email := .Get "email" }}
+{{ $phone := .Get "phone" }}
+{{ $location := .Get "location" }}
+{{ $website := .Get "website" }}
+{{ $content := .Inner }}
+
+<div class="profile-card">
+    <div class="profile-header">
+        {{ if $image }}
+        <div class="profile-image">
+            <img src="{{ $image }}" alt="{{ $name }}" loading="lazy">
+        </div>
+        {{ end }}
+        
+        <div class="profile-info">
+            <h2 class="profile-name">{{ $name }}</h2>
+            {{ if $title }}
+            <p class="profile-title">{{ $title }}</p>
+            {{ end }}
+            {{ if $bio }}
+            <p class="profile-bio">{{ $bio }}</p>
+            {{ end }}
+        </div>
+    </div>
+    
+    <div class="profile-details">
+        {{ if $email }}
+        <div class="detail-item">
+            <span class="detail-icon">📧</span>
+            <a href="mailto:{{ $email }}">{{ $email }}</a>
+        </div>
+        {{ end }}
+        
+        {{ if $phone }}
+        <div class="detail-item">
+            <span class="detail-icon">📞</span>
+            <a href="tel:{{ $phone }}">{{ $phone }}</a>
+        </div>
+        {{ end }}
+        
+        {{ if $location }}
+        <div class="detail-item">
+            <span class="detail-icon">📍</span>
+            <span>{{ $location }}</span>
+        </div>
+        {{ end }}
+        
+        {{ if $website }}
+        <div class="detail-item">
+            <span class="detail-icon">🌐</span>
+            <a href="{{ $website }}" target="_blank" rel="noopener">{{ $website }}</a>
+        </div>
+        {{ end }}
+    </div>
+    
+    {{ if $content }}
+    <div class="profile-content">
+        {{ $content | markdownify }}
+    </div>
+    {{ end }}
+</div>
+
+<style>
+.profile-card {
+    background: var(--background-light);
+    border-radius: 15px;
+    padding: 2rem;
+    margin: 2rem 0;
+    box-shadow: var(--shadow);
+    border: 1px solid var(--border-color);
+}
+
+.profile-header {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.profile-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 4px solid var(--primary-light);
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-info {
+    flex: 1;
+}
+
+.profile-name {
+    margin: 0 0 0.5rem 0;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.profile-title {
+    margin: 0 0 1rem 0;
+    color: var(--text-light);
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.profile-bio {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.profile-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem;
+    background: var(--background-color);
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.detail-item:hover {
+    background-color: var(--primary-light);
+}
+
+.detail-icon {
+    font-size: 1.2rem;
+    width: 24px;
+    text-align: center;
+}
+
+.detail-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.detail-item a:hover {
+    color: var(--primary-dark);
+    text-decoration: underline;
+}
+
+.profile-content {
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .profile-card {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+    
+    .profile-header {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+    
+    .profile-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .profile-name {
+        font-size: 1.5rem;
+    }
+    
+    .profile-details {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
