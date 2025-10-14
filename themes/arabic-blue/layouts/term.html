@@ -1,0 +1,73 @@
+{{ define "main" }}
+<div class="container fade-in">
+    <header class="mb-4">
+        <h1>{{ .Title }}</h1>
+        {{ if .Content }}
+        <div class="content">
+            {{ .Content }}
+        </div>
+        {{ end }}
+    </header>
+    
+    <section>
+        {{ if .Pages }}
+        <div class="posts-grid">
+            {{ range .Pages }}
+            <article class="card post-card">
+                <h2 class="card-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                
+                {{ if .Date }}
+                <p class="text-light mb-2">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">
+                        {{ .Date.Format "2 يناير 2006" }}
+                    </time>
+                </p>
+                {{ end }}
+                
+                {{ if .Summary }}
+                <div class="card-content">
+                    <p>{{ .Summary | truncate 200 }}</p>
+                </div>
+                {{ end }}
+                
+                <div class="mt-3">
+                    <a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a>
+                </div>
+            </article>
+            {{ end }}
+        </div>
+        {{ else }}
+        <div class="text-center">
+            <p>لا توجد محتويات متاحة لهذا المصطلح.</p>
+        </div>
+        {{ end }}
+    </section>
+</div>
+
+<style>
+.posts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.post-card {
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+    .posts-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+</style>
+{{ end }}

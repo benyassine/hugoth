@@ -1,0 +1,54 @@
+{{ $tags := .Site.Taxonomies.tags }}
+{{ if $tags }}
+<div class="tag-cloud">
+    {{ range $name, $taxonomy := $tags }}
+    <a href="{{ "/tags/" | relURL }}{{ $name | urlize }}" 
+       class="tag-cloud-item" 
+       style="font-size: {{ add 0.8 (mul (div (len $taxonomy.Pages) 5.0) 0.8) }}rem;">
+        {{ $name }} ({{ len $taxonomy.Pages }})
+    </a>
+    {{ end }}
+</div>
+{{ else }}
+<p>لا توجد علامات متاحة حالياً.</p>
+{{ end }}
+
+<style>
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin: 2rem 0;
+    justify-content: center;
+}
+
+.tag-cloud-item {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.tag-cloud-item:hover {
+    background-color: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .tag-cloud {
+        gap: 0.5rem;
+    }
+    
+    .tag-cloud-item {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+</style>
