@@ -11,32 +11,42 @@
 <div class="posts-list">
     {{ range .Pages }}
         <article class="article">
-            <h2 class="article-title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h2>
+            {{ if .Params.featured_image }}
+                <div class="article-featured-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" loading="lazy">
+                    </a>
+                </div>
+            {{ end }}
             
-            <div class="article-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">
-                    {{ .Date.Format "2 January 2006" }}
-                </time>
-                {{ if .Params.categories }}
-                    <span class="categories">
-                        {{ range .Params.categories }}
-                            <span class="category">{{ . }}</span>
-                        {{ end }}
-                    </span>
-                {{ end }}
-            </div>
-            
-            <div class="article-content">
-                {{ if .Summary }}
-                    {{ .Summary }}
-                    {{ if .Truncated }}
-                        <p><a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a></p>
+            <div class="article-body">
+                <h2 class="article-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h2>
+                
+                <div class="article-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">
+                        {{ .Date.Format "2 January 2006" }}
+                    </time>
+                    {{ if .Params.categories }}
+                        <span class="categories">
+                            {{ range .Params.categories }}
+                                <span class="category">{{ . }}</span>
+                            {{ end }}
+                        </span>
                     {{ end }}
-                {{ else }}
-                    {{ .Content }}
-                {{ end }}
+                </div>
+                
+                <div class="article-content">
+                    {{ if .Summary }}
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                            <p><a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a></p>
+                        {{ end }}
+                    {{ else }}
+                        {{ .Content }}
+                    {{ end }}
+                </div>
             </div>
         </article>
     {{ else }}

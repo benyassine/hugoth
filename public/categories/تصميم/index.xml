@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>تصميم on موقعي الشخصي</title>
+    <link>http://example.org/categories/%D8%AA%D8%B5%D9%85%D9%8A%D9%85/</link>
+    <description>Recent content in تصميم on موقعي الشخصي</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>ar</language>
+    <lastBuildDate>Tue, 30 Jan 2024 12:00:00 +0000</lastBuildDate>
+    <atom:link href="http://example.org/categories/%D8%AA%D8%B5%D9%85%D9%8A%D9%85/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>استخدام الصور البارزة في المدونات</title>
+      <link>http://example.org/posts/featured-images/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/posts/featured-images/</guid>
+      <description>أهمية الصور البارزة في المدونات الصور البارزة (Featured Images) تلعب دوراً مهماً جداً في جذب انتباه القراء وتحسين تجربة المستخدم في المدونات والمواقع الإلكترونية.&#xA;لماذا الصور البارزة مهمة؟ 1. الانطباع الأول الصورة البارزة هي أول ما يراه الزائر عند دخوله للمقال. إنها تخلق الانطباع الأول وتحدد ما إذا كان سيواصل القراءة أم لا.&#xA;2. تحسين المشاركة على وسائل التواصل عندما يتم مشاركة المقال على وسائل التواصل الاجتماعي، تظهر الصورة البارزة كمعاينة، مما يزيد من احتمالية النقر والمشاركة.</description>
+    </item>
+  </channel>
+</rss>

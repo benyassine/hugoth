@@ -6,8 +6,15 @@
     <description>Recent content in تطوير الويب on موقعي الشخصي</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ar</language>
-    <lastBuildDate>Thu, 25 Jan 2024 16:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jan 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://example.org/categories/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%88%D9%8A%D8%A8/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>استخدام الصور البارزة في المدونات</title>
+      <link>http://example.org/posts/featured-images/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/posts/featured-images/</guid>
+      <description>أهمية الصور البارزة في المدونات الصور البارزة (Featured Images) تلعب دوراً مهماً جداً في جذب انتباه القراء وتحسين تجربة المستخدم في المدونات والمواقع الإلكترونية.&#xA;لماذا الصور البارزة مهمة؟ 1. الانطباع الأول الصورة البارزة هي أول ما يراه الزائر عند دخوله للمقال. إنها تخلق الانطباع الأول وتحدد ما إذا كان سيواصل القراءة أم لا.&#xA;2. تحسين المشاركة على وسائل التواصل عندما يتم مشاركة المقال على وسائل التواصل الاجتماعي، تظهر الصورة البارزة كمعاينة، مما يزيد من احتمالية النقر والمشاركة.</description>
+    </item>
     <item>
       <title>إنشاء موقع Hugo يدعم العربية</title>
       <link>http://example.org/posts/hugo-arabic/</link>

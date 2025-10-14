@@ -6,20 +6,27 @@
     <description>Recent content in Categories on موقعي الشخصي</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ar</language>
-    <lastBuildDate>Thu, 25 Jan 2024 16:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jan 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://example.org/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>hugo</title>
-      <link>http://example.org/categories/hugo/</link>
-      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
-      <guid>http://example.org/categories/hugo/</guid>
+      <title>تصميم</title>
+      <link>http://example.org/categories/%D8%AA%D8%B5%D9%85%D9%8A%D9%85/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/categories/%D8%AA%D8%B5%D9%85%D9%8A%D9%85/</guid>
       <description></description>
     </item>
     <item>
       <title>تطوير الويب</title>
       <link>http://example.org/categories/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%88%D9%8A%D8%A8/</link>
-      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
       <guid>http://example.org/categories/%D8%AA%D8%B7%D9%88%D9%8A%D8%B1-%D8%A7%D9%84%D9%88%D9%8A%D8%A8/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>hugo</title>
+      <link>http://example.org/categories/hugo/</link>
+      <pubDate>Thu, 25 Jan 2024 16:45:00 +0000</pubDate>
+      <guid>http://example.org/categories/hugo/</guid>
       <description></description>
     </item>
     <item>

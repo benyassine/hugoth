@@ -6,8 +6,36 @@
     <description>Recent content in Tags on موقعي الشخصي</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>ar</language>
-    <lastBuildDate>Thu, 25 Jan 2024 16:45:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Jan 2024 12:00:00 +0000</lastBuildDate>
     <atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>تصميم</title>
+      <link>http://example.org/tags/%D8%AA%D8%B5%D9%85%D9%8A%D9%85/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D8%AA%D8%B5%D9%85%D9%8A%D9%85/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>صور</title>
+      <link>http://example.org/tags/%D8%B5%D9%88%D8%B1/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D8%B5%D9%88%D8%B1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>محتوى</title>
+      <link>http://example.org/tags/%D9%85%D8%AD%D8%AA%D9%88%D9%89/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D9%85%D8%AD%D8%AA%D9%88%D9%89/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>مدونة</title>
+      <link>http://example.org/tags/%D9%85%D8%AF%D9%88%D9%86%D8%A9/</link>
+      <pubDate>Tue, 30 Jan 2024 12:00:00 +0000</pubDate>
+      <guid>http://example.org/tags/%D9%85%D8%AF%D9%88%D9%86%D8%A9/</guid>
+      <description></description>
+    </item>
     <item>
       <title>hugo</title>
       <link>http://example.org/tags/hugo/</link>

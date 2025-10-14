@@ -4,6 +4,7 @@ date: 2024-01-25T16:45:00Z
 categories: ["تطوير الويب", "hugo"]
 tags: ["hugo", "عربي", "rtl", "static site"]
 author: "المؤلف"
+featured_image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
 ---
 
 # كيفية إنشاء موقع Hugo يدعم اللغة العربية

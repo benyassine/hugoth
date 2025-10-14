@@ -14,26 +14,36 @@
     {{ $pages := where .Site.RegularPages "Type" "posts" }}
     {{ range first 5 $pages }}
         <article class="article">
-            <h3 class="article-title">
-                <a href="{{ .Permalink }}">{{ .Title }}</a>
-            </h3>
+            {{ if .Params.featured_image }}
+                <div class="article-featured-image">
+                    <a href="{{ .Permalink }}">
+                        <img src="{{ .Params.featured_image | relURL }}" alt="{{ .Title }}" loading="lazy">
+                    </a>
+                </div>
+            {{ end }}
             
-            <div class="article-meta">
-                <time datetime="{{ .Date.Format "2006-01-02" }}">
-                    {{ .Date.Format "2 January 2006" }}
-                </time>
-            </div>
-            
-            <div class="article-content">
-                {{ if .Summary }}
-                    {{ .Summary }}
-                    {{ if .Truncated }}
+            <div class="article-body">
+                <h3 class="article-title">
+                    <a href="{{ .Permalink }}">{{ .Title }}</a>
+                </h3>
+                
+                <div class="article-meta">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">
+                        {{ .Date.Format "2 January 2006" }}
+                    </time>
+                </div>
+                
+                <div class="article-content">
+                    {{ if .Summary }}
+                        {{ .Summary }}
+                        {{ if .Truncated }}
+                            <p><a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a></p>
+                        {{ end }}
+                    {{ else }}
+                        {{ .Content | truncate 200 }}
                         <p><a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a></p>
                     {{ end }}
-                {{ else }}
-                    {{ .Content | truncate 200 }}
-                    <p><a href="{{ .Permalink }}" class="btn">اقرأ المزيد</a></p>
-                {{ end }}
+                </div>
             </div>
         </article>
     {{ else }}
